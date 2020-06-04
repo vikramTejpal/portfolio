@@ -1,0 +1,111 @@
+/*MASTER STYLES*/
+body{
+    margin:0px;
+    font-family: "Tenali Ramakrishna",sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+/*NAVBAR STYLES*/
+.nav-wrapper{
+    display:flex;
+    justify-content: space-between;
+    padding:38px;
+}
+.left-side{
+    Display:flex;
+}
+
+/*this is how we traverse in css
+therfore we can implement styles on all the divs inside of  class left-side*/
+.nav-wrapper > .left-side > div {
+    margin-right   : 20px;
+    font-size      : 0.9em; 
+    text-transform : uppercase;   
+}
+.nav-link-wrapper{
+    height:20px;
+    border-bottom:1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+/*we just grabbed a tags inside of nav link wrapper*/
+.nav-link-wrapper a {
+    color: #8a8a88;
+    text-decoration: none;
+    transition:color 0.5s
+}
+/*This is how we tell css to use hover*/
+.nav-link-wrapper:hover{
+    border-bottom:1px solid black
+}
+.nav-link-wrapper a:hover{
+    color:1px solid black
+}
+
+/*PORTFOLIO STYLES*/
+.portfolio-items-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.portfolio-item-wrapper{
+    position:relative;
+}
+.portfolio-img-background{
+    height:350px;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img-text-wrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.logo-wrapper img{
+    width:50%;
+    margin-bottom: 20px;
+}
+
+.img-text-wrapper .subtitle{
+    transition: 1s;
+    color:transparent;
+    font-weight: 600;
+}
+
+.img-text-wrapper:hover .subtitle{
+    font-weight: 600;
+    color:lightseagreen
+}
+.img-darken{
+    transition: 1s;
+    filter:brightness(10%)
+}
+
+/*About me styles*/
+.two-colomn-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img{
+    width:100%
+}
+
+.profile-content-wrapper{
+    padding:30px;
+}
+.profile-content-wrapper h1{
+    color: lightseagreen;
+}
+.profile-content-wrapper p{
+    color: #8a8a88;
+}
